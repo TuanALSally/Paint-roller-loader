@@ -1,0 +1,130 @@
+body {
+  background-color: #5f1760;
+  padding: 0;
+  margin: 0;
+}
+.wrapper {
+  height: 420px;
+  width: 350px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+}
+.container {
+  height: 350px;
+  width: 350px;
+  position: absolute;
+  -webkit-transform: rotate(-45deg);
+  -ms-transform: rotate(-45deg);
+  transform: rotate(-45deg);
+  top: 0;
+  left: 0;
+}
+.roller {
+  height: 45px;
+  width: 150px;
+  border: 5px solid #040e15;
+  border-radius: 7px;
+  background-image: -webkit-gradient(
+    linear,
+    left top,
+    left bottom,
+    color-stop(0, #ffca3e),
+    color-stop(80%, #ffca3e),
+    color-stop(80%, #fc8f2e)
+  );
+  background-image: -o-linear-gradient(
+    top,
+    #ffca3e 0,
+    #ffca3e 80%,
+    #fc8f2e 80%
+  );
+  background-image: linear-gradient(
+    to bottom,
+    #ffca3e 0,
+    #ffca3e 80%,
+    #fc8f2e 80%
+  );
+  position: absolute;
+  margin: auto;
+  left: 0;
+  right: 0;
+  top: 0;
+  -webkit-animation: roller 2s infinite;
+  animation: roller 2s infinite;
+}
+@-webkit-keyframes roller {
+  40% {
+    top: 165px;
+  }
+}
+@keyframes roller {
+  40% {
+    top: 165px;
+  }
+}
+.roller:before {
+  position: absolute;
+  content: "";
+  background-color: rgba(255, 255, 255, 0.7);
+  height: 7px;
+  width: 75px;
+  top: 8px;
+  left: 8px;
+  border-radius: 10px;
+}
+.roller:after {
+  position: absolute;
+  content: "";
+  height: 40px;
+  width: 85px;
+  border: 7px solid #040e15;
+  border-left: none;
+  right: -20px;
+  top: 20px;
+  z-index: -1;
+  border-radius: 7px;
+}
+.handle {
+  height: 30px;
+  width: 7px;
+  background-color: #040e15;
+  position: absolute;
+  top: 68px;
+  right: 65px;
+}
+.handle:after {
+  position: absolute;
+  content: "";
+  height: 75px;
+  width: 25px;
+  background-color: #040e15;
+  bottom: -75px;
+  right: -8px;
+  border-radius: 5px;
+}
+.paint {
+  background-color: #ffca3e;
+  height: 0;
+  width: 130px;
+  position: absolute;
+  margin: auto;
+  left: 0;
+  right: 0;
+  z-index: -1;
+  -webkit-animation: paint 2s infinite;
+  animation: paint 2s infinite;
+}
+@-webkit-keyframes paint {
+  40% {
+    height: 165px;
+  }
+}
+@keyframes paint {
+  40% {
+    height: 165px;
+  }
+}
